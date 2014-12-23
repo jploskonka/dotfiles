@@ -30,6 +30,9 @@ Plugin 'tpope/vim-haml'
 
 Plugin 'rking/ag.vim'
 
+" Ansible
+Plugin 'chase/vim-ansible-yaml'
+
 " GoLang
 Plugin 'fatih/vim-go'
 

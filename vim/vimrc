@@ -38,7 +38,11 @@ set smartcase
 
 " wildmenu
 set wildmenu
-set wildmode=full
+set wildmode=longest:full,full
+
+" Whitespace
+set list
+set listchars=tab:>.,trail:.,extends:\#,nbsp:.
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -112,7 +116,6 @@ set numberwidth=5
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
-set wildmode=list:longest,list:full
 function! InsertTabWrapper()
     let col = col('.') - 1
     if !col || getline('.')[col - 1] !~ '\k'
@@ -152,4 +155,7 @@ set diffopt+=vertical
 " insert binding.pry easily
 nnoremap <c-a> orequire 'pry'; binding.pry<Esc>
 inoremap <c-a> require 'pry'; binding.pry<Esc>
+
+nnoremap <leader>l :set cursorline!<CR>
+nnoremap <leader>L :set cursorcolumn!<CR>
 
