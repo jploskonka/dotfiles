@@ -13,7 +13,8 @@ filetype plugin indent on
 let mapleader = " "
 let &t_Co=256
 
-colorscheme jellybeans
+set background=dark
+colorscheme base16-default
 
 set hidden
 set backspace=2   " Backspace deletes like most programs in insert mode
@@ -22,7 +23,6 @@ set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set history=50
 set showcmd       " display incomplete commands
-set cursorline
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
@@ -38,7 +38,7 @@ set smartcase
 
 " wildmenu
 set wildmenu
-set wildmode=longest:full,full
+set wildmode=full:longest,full
 
 " Whitespace
 set list
@@ -157,5 +157,20 @@ nnoremap <c-a> orequire 'pry'; binding.pry<Esc>
 inoremap <c-a> require 'pry'; binding.pry<Esc>
 
 nnoremap <leader>l :set cursorline!<CR>
-nnoremap <leader>L :set cursorcolumn!<CR>
+nnoremap <leader>k :set cursorcolumn!<CR>
 
+function! LinePing()
+  set cursorline
+  redraw
+  sleep 50m
+  set nocursorline
+endfunction
+
+nmap <leader>L :call LinePing()<CR>
+
+let g:airline_powerline_fonts = 1
+
+" easily copy/paste with system clipboard
+vnoremap <leader>c "*y
+nnoremap <leader>cc "*yy
+noremap <leader>v "*p

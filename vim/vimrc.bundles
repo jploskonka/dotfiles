@@ -16,6 +16,7 @@ Plugin 'FelikZ/ctrlp-py-matcher'
 
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'tpope/vim-fugitive'
+Plugin 'justinmk/vim-syntax-extra'
 
 " Ruby and Rails plugins
 Plugin 'vim-ruby/vim-ruby'
@@ -36,8 +37,12 @@ Plugin 'chase/vim-ansible-yaml'
 " GoLang
 Plugin 'fatih/vim-go'
 
+" C/C++
+"Plugin 'c.vim'
+
 " color schemes
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 filetype on
