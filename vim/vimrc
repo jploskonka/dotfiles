@@ -156,6 +156,8 @@ set diffopt+=vertical
 nnoremap <c-a> orequire 'pry'; binding.pry<Esc>
 inoremap <c-a> require 'pry'; binding.pry<Esc>
 
+
+" line/column highlighting
 nnoremap <leader>l :set cursorline!<CR>
 nnoremap <leader>k :set cursorcolumn!<CR>
 
@@ -174,3 +176,7 @@ let g:airline_powerline_fonts = 1
 vnoremap <leader>c "*y
 nnoremap <leader>cc "*yy
 noremap <leader>v "*p
+
+" easier movement around tabs
+nnoremap <leader>] gt
+nnoremap <leader>[ gT
