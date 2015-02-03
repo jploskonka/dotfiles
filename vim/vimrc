@@ -180,3 +180,8 @@ noremap <leader>v "*p
 " easier movement around tabs
 nnoremap <leader>] gt
 nnoremap <leader>[ gT
+
+" splits resize
+nnoremap <leader>. 20<C-w>>
+nnoremap <leader>, 20<C-w><
+nnoremap <leader>= <C-w>=
