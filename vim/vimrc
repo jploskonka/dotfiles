@@ -158,9 +158,6 @@ inoremap <c-a> require 'pry'; binding.pry<Esc>
 
 
 " line/column highlighting
-nnoremap <leader>l :set cursorline!<CR>
-nnoremap <leader>k :set cursorcolumn!<CR>
-
 function! LinePing()
   set cursorline
   redraw
@@ -185,3 +182,22 @@ nnoremap <leader>[ gT
 nnoremap <leader>. 20<C-w>>
 nnoremap <leader>, 20<C-w><
 nnoremap <leader>= <C-w>=
+
+" Spin calling copied from
+" https://github.com/jareks/dotfiles/blob/master/vim/.vimrc
+map <leader>r <ESC>:call CallSpin()<CR><CR>
+map <leader>f <ESC>:call SetSpinCall(expand("%"), 0)<CR>:call CallSpin()<CR><CR>
+map <leader>l <ESC>:call SetSpinCall(expand("%"), line("."))<CR>:call CallSpin()<CR><CR>
+
+function SetSpinCall(filename, linenum)
+  let g:spin_test_file = a:filename
+  let g:spin_test_line = a:linenum
+endfunction
+
+function! CallSpin()
+  if g:spin_test_line 
+    execute "!spin push " . g:spin_test_file . ":" . g:spin_test_line
+  else
+    execute "!spin push " . g:spin_test_file
+  endif
+endfunction
