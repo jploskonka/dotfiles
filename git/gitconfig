@@ -1,0 +1,52 @@
+[user]
+  name = Jakub Płoskonka
+  email = ploskonkajakub@gmail.com
+
+[push]
+  default = current
+
+[color]
+  ui = auto
+
+[alias]
+  aa = add --all
+  ap = add --patch
+  ca = commit --amend
+  ci = commit -v
+  cim = commit -m
+  co = checkout
+  di = diff
+  dc = diff --cached
+  st = status
+  s = status -s
+  lg = log --oneline --decorate --all --graph
+  blc = "!sh  -c 'for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format=\"%ci %cr\" $branch | head -n 1` \\t$branch; done | sort -r'"
+  ignore = update-index --assume-unchanged
+  uningore = update-index --no-assume-unchanged
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
+
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+
+[difftool]
+  prompt = false
+[diff]
+  tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[merge]
+  tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+
+[merge]
+  ff = only
+
+[commit]
+  template = ~/.gitmessage
+
+[fetch]
+  prune = true
+
