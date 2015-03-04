@@ -8,6 +8,7 @@ rerun.txt
 tmp/**/*
 !tmp/cache/.keep
 vendor/bundle
+./vendor/bundle
 .rbenv-gemsets
 *.sublime-project
 *.sublime-workspace

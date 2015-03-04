@@ -11,6 +11,7 @@ filetype plugin indent on
 
 " Leader
 let mapleader = " "
+nnoremap ; :
 let &t_Co=256
 
 set background=dark
@@ -87,8 +88,12 @@ set expandtab
 
 " CTRL P
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 1
+let g:ctrlp_use_caching = 0
 " let g:ctrlp_lazy_update = 10
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$|\.yardoc\|vendor/bundle|public$|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$|\.jpg$',
+  \ }
 
 
 " get rid of last search highlight
