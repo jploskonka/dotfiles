@@ -14,6 +14,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 
+" Undo branches
+Plugin 'mbbill/undotree'
+
 " Tmux Integration
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'edkolev/tmuxline.vim'

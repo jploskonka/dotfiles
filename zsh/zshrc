@@ -1,0 +1,66 @@
+# Shell aliases
+source ~/.aliases
+
+export EDITOR=vim
+
+# Plugins
+# use Antigen for plugins management
+source ~/.antigen.zsh
+
+# Load oh-my-zsh library
+antigen use oh-my-zsh
+
+# git
+antigen bundle git
+# syntax highlighting
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen apply
+
+# Remove git dirty indicator from git_prompt_info
+function git_prompt_info() {
+  if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
+    ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
+    ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
+    echo "%{$fg[blue]%}${ref#refs/heads/}%{$reset_color%}"
+  fi
+}
+
+# Change git_prompt_info format
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%} ✗ %{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=" "
+
+# Vim mode + some useful shortcuts
+bindkey -v
+bindkey '^r' history-incremental-search-backward
+bindkey '^?' backward-delete-char # backspace working after return from command mode
+# Use vim cli mode
+bindkey '^P' up-history
+bindkey '^N' down-history
+
+# go to beginning and end of line with Emacs shortcuts
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+
+# Set left and right prompts
+function zle-line-init zle-keymap-select {
+    VIM_NORMAL="%{$fg[blue]%} [% CMD]% %{$reset_color%}"
+    VIM_INSERT="%{$fg[red]%} [% INS]% %{$reset_color%}"
+
+
+    # Set left and right prompt
+    PROMPT="%{$fg[green]%}%~%{$reset_color%}${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/$VIM_INSERT}$(parse_git_dirty)"
+    RPROMPT="$(git_prompt_info)%{$reset_color%}"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+export KEYTIMEOUT=1
+
+# Default left prompt
+export PROMPT="%{$fg[green]%}%~%{$reset_color%}$VIM_INSERT "
+
+# Init rbenv
+eval "$(rbenv init - zsh)"
+

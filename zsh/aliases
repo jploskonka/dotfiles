@@ -1,0 +1,38 @@
+# rm with prompt
+alias rm='rm -i'
+# cd 
+alias ..='cd ..'
+
+# ls
+alias ls='pwd; ls -GF'
+alias ls.='pwd; ls -aGF'
+alias ll='pwd; ls -lGFh'
+alias ll.='pwd; ls -alGFh'
+
+# grep
+alias grep='grep --color=auto'
+
+# bc without welcome message and with math lib support
+alias bc='bc -lq'
+
+# colorful tree
+alias t='tree -C -I "bundle|tmp"' # skip vendor/bundle and tmp directories
+alias td='tree -C -d' # directories only
+
+# bundler
+alias b='bundle exec'
+alias bi='bundle install'
+alias bcl='bundle clean'
+
+# cat with syntax hihlighting :D 
+alias ccat='pygmentize'
+
+# one/two letter commands for often used commands
+alias v='vim'
+alias v.='vim .'
+alias j='jobs'
+
+# rails commands shortcuts
+alias brs='bundle exec rails s -b 0.0.0.0'
+alias brc='bundle exec rails c'
+alias brm='bundle exec rake db:migrate && bundle exec rake db:migrate RAILS_ENV=test'

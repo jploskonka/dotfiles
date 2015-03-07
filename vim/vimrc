@@ -204,3 +204,5 @@ function! RenameFile()
 endfunction
 
 map <leader>R :call RenameFile()<CR>
+
+map <leader>g :Ag 
