@@ -64,3 +64,7 @@ export PROMPT="%{$fg[green]%}%~%{$reset_color%}$VIM_INSERT "
 # Init rbenv
 eval "$(rbenv init - zsh)"
 
+
+# https://github.com/nvbn/thefuck
+alias fuck='$(thefuck $(fc -ln -1))'
+alias FUCK='fuck'

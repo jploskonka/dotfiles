@@ -74,7 +74,7 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
   " Allow stylesheets to autocomplete hyphenated words
-  autocmd FileType css,scss,sass setlocal iskeyword+=-
+  autocmd FileType css,scss,sass,html,haml setlocal iskeyword+=-
 
   " set tab width for Go Lang
   autocmd FileType go setlocal shiftwidth=8 tabstop=8
@@ -89,7 +89,6 @@ set expandtab
 " CTRL P
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
-" let g:ctrlp_lazy_update = 10
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$|\.yardoc\|vendor/bundle|public$|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$|\.jpg$',
@@ -99,7 +98,7 @@ let g:ctrlp_custom_ignore = {
 " get rid of last search highlight
 nnoremap <CR> :noh<CR>
 
-" Numbers
+" Line numbers
 set number
 set numberwidth=5
 
@@ -121,10 +120,10 @@ inoremap <S-Tab> <c-n>
 nnoremap <leader><leader> <c-^>
 
 " Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+" nnoremap <Left> :echoe "Use h"<CR>
+" nnoremap <Right> :echoe "Use l"<CR>
+" nnoremap <Up> :echoe "Use k"<CR>
+" nnoremap <Down> :echoe "Use j"<CR>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
@@ -144,7 +143,7 @@ set diffopt+=vertical
 
 " insert binding.pry easily
 nnoremap <c-a> orequire 'pry'; binding.pry<Esc>
-inoremap <c-a> require 'pry'; binding.pry<Esc>
+inoremap <c-a> require 'pry'; binding.pry<space>
 
 
 " line/column highlighting
@@ -161,7 +160,6 @@ let g:airline_powerline_fonts = 1
 
 " easily copy/paste with system clipboard
 vnoremap <leader>c "*y
-nnoremap <leader>cc "*yy
 noremap <leader>v "*p
 
 " easier movement around tabs
@@ -175,9 +173,9 @@ nnoremap <leader>= <C-w>=
 
 " Spin calling copied from
 " https://github.com/jareks/dotfiles/blob/master/vim/.vimrc
-map <leader>r <ESC>:call CallSpin()<CR><CR>
-map <leader>f <ESC>:call SetSpinCall(expand("%"), 0)<CR>:call CallSpin()<CR><CR>
-map <leader>l <ESC>:call SetSpinCall(expand("%"), line("."))<CR>:call CallSpin()<CR><CR>
+map <leader>r <ESC>:call CallSpin()<CR>
+map <leader>f <ESC>:call SetSpinCall(expand("%"), 0)<CR>:call CallSpin()<CR>
+map <leader>l <ESC>:call SetSpinCall(expand("%"), line("."))<CR>:call CallSpin()<CR>
 
 function! SetSpinCall(filename, linenum)
   let g:spin_test_file = a:filename
@@ -185,10 +183,10 @@ function! SetSpinCall(filename, linenum)
 endfunction
 
 function! CallSpin()
-  if g:spin_test_line 
-    execute "!spin push " . g:spin_test_file . ":" . g:spin_test_line
+  if g:spin_test_line
+    execute "Dispatch! spin push " . g:spin_test_file . ":" . g:spin_test_line
   else
-    execute "!spin push " . g:spin_test_file
+    execute "Dispatch! spin push " . g:spin_test_file
   endif
 endfunction
 
@@ -205,4 +203,36 @@ endfunction
 
 map <leader>R :call RenameFile()<CR>
 
-map <leader>g :Ag 
+" Ag shortcuts - open Ag in new tab
+function! SearchInNewTab()
+  let g:word_to_search = expand("<cword>")
+  tabe
+  execute "Ag " g:word_to_search
+endfunction
+
+map <leader>G :call SearchInNewTab()<CR>
+map <leader>g :Ag<space><C-r><C-w><CR>
+map <leader>a :Ag<space>
+
+" Disable ex mode
+map Q <Nop>
+
+map <leader>o ;Dispatch! chrome-cli open http://<space>
+
+" Quick mappings for <leader>t
+"
+" Map <leader>t to activate and reload chrome tab
+function! MapForChromeReload(tab_id)
+  execute "map <leader>t :Dispatch! chrome-cli activate -t " a:tab_id " && chrome-cli reload<CR>"
+endfunction
+command! -nargs=1 MapForChromeReload call MapForChromeReload(<f-args>)
+
+
+" Rails edit shortcuts
+map <leader>rc :Econtroller<space>
+map <leader>rv :Eview<space>
+map <leader>rm :Emodel<space>
+map <leader>rh :Ehelper<space>
+map <leader>re :Eenvironment<space>
+map <leader>ri :Einitializer<space>
+map <leader>rx :Rextract<space>
