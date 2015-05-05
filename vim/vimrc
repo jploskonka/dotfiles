@@ -11,7 +11,9 @@ filetype plugin indent on
 
 " Leader
 let mapleader = " "
+" swap : and ;
 nnoremap ; :
+
 let &t_Co=256
 
 set background=dark
@@ -27,6 +29,7 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+set autoread
 set nowrap        " dont wrap words
 set scrolloff=10
 set mouse=c       " turn off mouse
@@ -78,13 +81,20 @@ augroup vimrcEx
 
   " set tab width for Go Lang
   autocmd FileType go setlocal shiftwidth=8 tabstop=8
+
+
 augroup END
+
 
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
 set shiftround
 set expandtab
+
+" ; ,
+nnoremap 8 ,
+nnoremap 9 ;
 
 " CTRL P
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -173,7 +183,7 @@ nnoremap <leader>= <C-w>=
 
 " Spin calling copied from
 " https://github.com/jareks/dotfiles/blob/master/vim/.vimrc
-map <leader>r <ESC>:call CallSpin()<CR>
+map <leader>s <ESC>:call CallSpin()<CR>
 map <leader>f <ESC>:call SetSpinCall(expand("%"), 0)<CR>:call CallSpin()<CR>
 map <leader>l <ESC>:call SetSpinCall(expand("%"), line("."))<CR>:call CallSpin()<CR>
 
@@ -236,3 +246,18 @@ map <leader>rh :Ehelper<space>
 map <leader>re :Eenvironment<space>
 map <leader>ri :Einitializer<space>
 map <leader>rx :Rextract<space>
+
+
+" Reload currently open windows
+function! ReloadOpenWindows()
+  set noconfirm
+  windo e!
+  set confirm
+endfunction
+
+map <leader>1 :call ReloadOpenWindows()<CR>
+
+" Move line up/down
+nnoremap U ddkP
+nnoremap Y ddp
+
