@@ -47,3 +47,9 @@ alias chi='chrome-cli info'
 alias tx='tmux'
 alias txl='tmux ls'
 alias txa='tmux attach -t'
+
+# Rust lang
+alias rc='rustc'
+alias c='cargo'
+alias cb='cargo build'
+alias cr='cargo run'
