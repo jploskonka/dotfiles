@@ -11,8 +11,6 @@ filetype plugin indent on
 
 " Leader
 let mapleader = " "
-" swap : and ;
-nnoremap ; :
 
 let &t_Co=256
 
@@ -91,10 +89,6 @@ set tabstop=2
 set shiftwidth=2
 set shiftround
 set expandtab
-
-" ; ,
-nnoremap 8 ,
-nnoremap 9 ;
 
 " CTRL P
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
