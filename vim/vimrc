@@ -92,7 +92,8 @@ set expandtab
 
 " CTRL P
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 0
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+" let g:ctrlp_use_caching = 1
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$|\.yardoc\|vendor/bundle|public$|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$|\.jpg$',
@@ -146,8 +147,7 @@ nnoremap <C-l> <C-w>l
 set diffopt+=vertical
 
 " insert binding.pry easily
-nnoremap <c-a> orequire 'pry'; binding.pry<Esc>
-inoremap <c-a> require 'pry'; binding.pry<space>
+inoremap <c-a> require 'pry'; binding.pry
 
 
 " line/column highlighting
@@ -219,7 +219,9 @@ map <leader>g :Ag<space><C-r><C-w><CR>
 map <leader>a :Ag<space>
 
 " Disable ex mode
-map Q <Nop>
+map Q <NOP>
+" Disable manual search
+map K <NOP>
 
 map <leader>o :Dispatch! chrome-cli open http://<space>
 
@@ -262,4 +264,7 @@ function! RandomCSSBackgroundColor()
   return s:css_colors[s:random]
 endfunction
 imap <C-K> <C-R>=RandomCSSBackgroundColor()<CR>
+
+
+let g:jsx_ext_required = 0
 

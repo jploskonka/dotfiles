@@ -41,9 +41,6 @@
   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustExitCode = true
 
-[merge]
-  ff = only
-
 [commit]
   template = ~/.gitmessage
 

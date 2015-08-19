@@ -37,6 +37,8 @@ alias brs='bundle exec rails s -b 0.0.0.0'
 alias brc='bundle exec rails c'
 alias brm='bundle exec rake db:migrate && bundle exec rake db:migrate RAILS_ENV=test'
 alias br='bundle exec rails'
+# spin
+alias ss='spin serve'
 
 # chrome-cli
 alias ch='chrome-cli'
@@ -53,3 +55,6 @@ alias rc='rustc'
 alias c='cargo'
 alias cb='cargo build'
 alias cr='cargo run'
+
+# use gnu date instead of date
+alias date='gdate'

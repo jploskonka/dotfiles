@@ -14,4 +14,5 @@ vendor/bundle
 *.sublime-workspace
 log
 
-
+vendor/bundle
+

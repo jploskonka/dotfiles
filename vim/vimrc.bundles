@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 " Define bundles via Github repos
 " ctrlp with faster matcher
 Plugin 'kien/ctrlp.vim'
+Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'rking/ag.vim'
 
 " Undo branches
@@ -24,6 +25,11 @@ Plugin 'tpope/vim-dispatch'
 
 " Git
 Plugin 'tpope/vim-fugitive'
+
+" Snippets
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 
 " Ruby and Rails plugins
 Plugin 'vim-ruby/vim-ruby'
@@ -55,17 +61,23 @@ Plugin 'chase/vim-ansible-yaml'
 " color scheme
 Plugin 'chriskempson/base16-vim'
 
-" Show marks
-Plugin 'kshenoy/vim-signature'
-
 " Time tracking
 Plugin 'wakatime/vim-wakatime'
 
-" Rust
-Plugin 'rust-lang/rust.vim'
-
 " TOML
 Plugin 'cespare/vim-toml'
+
+" JS
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'jelera/vim-javascript-syntax'
+
+" GoLang
+Plugin 'fatih/vim-go'
+Plugin 'garyburd/go-explorer'
+
+" Reactjs
+Plugin 'justinj/vim-react-snippets'
+
 call vundle#end()
 filetype on
 
