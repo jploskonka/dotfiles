@@ -69,7 +69,8 @@ Plugin 'cespare/vim-toml'
 
 " JS
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/yajs.vim'
 
 " GoLang
 Plugin 'fatih/vim-go'

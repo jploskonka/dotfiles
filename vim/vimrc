@@ -37,6 +37,7 @@ set colorcolumn=0
 set smartindent
 set ignorecase
 set smartcase
+set undofile
 
 " wildmenu
 set wildmenu
