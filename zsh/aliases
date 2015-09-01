@@ -16,7 +16,7 @@ alias grep='grep --color=auto'
 alias bc='bc -lq'
 
 # colorful tree
-alias t='tree -C -I "bundle|tmp"' # skip vendor/bundle and tmp directories
+alias t='tree -C -I "bundle|tmp|node_modules"'
 alias td='tree -C -d' # directories only
 
 # bundler
@@ -58,3 +58,12 @@ alias cr='cargo run'
 
 # use gnu date instead of date
 alias date='gdate'
+
+# npm
+alias ni='npm install'
+alias nis='npm install --save'
+alias nisd='npm install --save-dev'
+alias np='npm prune'
+alias nr='npm run'
+alias nrd='npm run dev'
+alias nt='npm test'

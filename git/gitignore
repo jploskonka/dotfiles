@@ -17,3 +17,4 @@ log
 vendor/bundle
 
 *.un~
+/node_modules
