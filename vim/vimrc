@@ -15,6 +15,7 @@ let mapleader = " "
 let &t_Co=256
 
 set background=dark
+let base16colorspace=256
 colorscheme base16-default
 
 set hidden
@@ -269,3 +270,6 @@ imap <C-K> <C-R>=RandomCSSBackgroundColor()<CR>
 
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0
+
+" Used javascript libraries
+let g:used_javascript_libs = 'jquery,react,flux,jasmine'

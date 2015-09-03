@@ -1,3 +1,7 @@
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 export PATH=/usr/local/bin:$PATH
 
 export LC_ALL=pl_PL.UTF-8
