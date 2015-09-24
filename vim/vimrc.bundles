@@ -61,6 +61,9 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'justinj/vim-react-snippets'
 Plugin 'mxw/vim-jsx'
 
+" Ansible
+Bundle 'chase/vim-ansible-yaml'
+
 call vundle#end()
 filetype on
 
