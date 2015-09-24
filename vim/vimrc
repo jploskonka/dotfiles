@@ -96,6 +96,10 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.so$\|\.dat$|\.DS_Store$|\.jpg$',
   \ }
 
+" mappings for CTRL P
+map <leader>b :CtrlPBuffer<CR>
+map <leader>p :CtrlP<CR>
+map <leader>m :CtrlPMRU<CR>
 
 " get rid of last search highlight
 nnoremap <CR> :noh<CR>
