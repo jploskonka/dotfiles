@@ -33,7 +33,8 @@ alias v.='vim .'
 alias j='jobs'
 
 # rails commands shortcuts
-alias brs='bundle exec rails s -b 0.0.0.0'
+alias pbrs='bundle exec rails s -b 0.0.0.0'
+alias brs='HIDE_PROFILER=1 pbrs'
 alias brc='bundle exec rails c'
 alias brm='bundle exec rake db:migrate && bundle exec rake db:migrate RAILS_ENV=test'
 alias br='bundle exec rails'
