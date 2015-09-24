@@ -76,13 +76,8 @@ augroup vimrcEx
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
-  " Allow stylesheets to autocomplete hyphenated words
-  autocmd FileType css,scss,sass,html,haml setlocal iskeyword+=-
-
   " set tab width for Go Lang
   autocmd FileType go setlocal shiftwidth=8 tabstop=8
-
-
 augroup END
 
 
@@ -260,12 +255,23 @@ map <leader>1 :call ReloadOpenWindows()<CR>
 nnoremap U ddkP
 nnoremap Y ddp
 
+" Generate random CSS background color
+" TODO: don't use ruby for getting random number
 function! RandomCSSBackgroundColor()
   let s:css_colors = { 1: 'AliceBlue', 2: 'AntiqueWhite', 3: 'Aqua', 4: 'Aquamarine', 5: 'Azure', 6: 'Beige', 7: 'Bisque', 8: 'Black', 9: 'BlanchedAlmond', 10: 'Blue', 11: 'BlueViolet', 12: 'Brown', 13: 'BurlyWood', 14: 'CadetBlue', 15: 'Chartreuse', 16: 'Chocolate', 17: 'Coral', 18: 'CornflowerBlue', 19: 'Cornsilk', 20: 'Crimson', 21: 'Cyan', 22: 'DarkBlue', 23: 'DarkCyan', 24: 'DarkGoldenRod', 25: 'DarkGray', 26: 'DarkGreen', 27: 'DarkKhaki', 28: 'DarkMagenta', 29: 'DarkOliveGreen', 30: 'DarkOrange', 31: 'DarkOrchid', 32: 'DarkRed', 33: 'DarkSalmon', 34: 'DarkSeaGreen', 35: 'DarkSlateBlue', 36: 'DarkSlateGray', 37: 'DarkTurquoise', 38: 'DarkViolet', 39: 'DeepPink', 40: 'DeepSkyBlue', 41: 'DimGray', 42: 'DodgerBlue', 43: 'FireBrick', 44: 'FloralWhite', 45: 'ForestGreen', 46: 'Fuchsia', 47: 'Gainsboro', 48: 'GhostWhite', 49: 'Gold', 50: 'GoldenRod', 51: 'Gray', 52: 'Green', 53: 'GreenYellow', 54: 'HoneyDew', 55: 'HotPink', 56: 'IndianRed', 57: 'Indigo', 58: 'Ivory', 59: 'Khaki', 60: 'Lavender', 61: 'LavenderBlush', 62: 'LawnGreen', 63: 'LemonChiffon', 64: 'LightBlue', 65: 'LightCoral', 66: 'LightCyan', 67: 'LightGoldenRodYellow', 68: 'LightGray', 69: 'LightGreen', 70: 'LightPink', 71: 'LightSalmon', 72: 'LightSeaGreen', 73: 'LightSkyBlue', 74: 'LightSlateGray', 75: 'LightSteelBlue', 76: 'LightYellow', 77: 'Lime', 78: 'LimeGreen', 79: 'Linen', 80: 'Magenta', 81: 'Maroon', 82: 'MediumAquaMarine', 83: 'MediumBlue', 84: 'MediumOrchid', 85: 'MediumPurple', 86: 'MediumSeaGreen', 87: 'MediumSlateBlue', 88: 'MediumSpringGreen', 89: 'MediumTurquoise', 90: 'MediumVioletRed', 91: 'MidnightBlue', 92: 'MintCream', 93: 'MistyRose', 94: 'Moccasin', 95: 'NavajoWhite', 96: 'Navy', 97: 'OldLace', 98: 'Olive', 99: 'OliveDrab', 100: 'Orange', 101: 'OrangeRed', 102: 'Orchid', 103: 'PaleGoldenRod', 104: 'PaleGreen', 105: 'PaleTurquoise', 106: 'PaleVioletRed', 107: 'PapayaWhip', 108: 'PeachPuff', 109: 'Peru', 110: 'Pink', 111: 'Plum', 112: 'PowderBlue', 113: 'Purple', 114: 'RebeccaPurple', 115: 'Red', 116: 'RosyBrown', 117: 'RoyalBlue', 118: 'SaddleBrown', 119: 'Salmon', 120: 'SandyBrown', 121: 'SeaGreen', 122: 'SeaShell', 123: 'Sienna', 124: 'Silver', 125: 'SkyBlue', 126: 'SlateBlue', 127: 'SlateGray', 128: 'Snow', 129: 'SpringGreen', 130: 'SteelBlue', 131: 'Tan', 132: 'Teal', 133: 'Thistle', 134: 'Tomato', 135: 'Turquoise', 136: 'Violet', 137: 'Wheat', 138: 'White', 139: 'WhiteSmoke', 140: 'Yellow', 141: 'YellowGreen' }
   let s:random = system("ruby -e 'puts Random.rand(1..100)'")[:-2]
   return s:css_colors[s:random]
 endfunction
-imap <C-K> <C-R>=RandomCSSBackgroundColor()<CR>
+
+augroup filetype_scss
+  autocmd!
+
+  " Insert random color name (useful for debugging)
+  autocmd FileType css,scss,sass imap <buffer> <C-K> <C-R>=RandomCSSBackgroundColor()<CR>
+
+  " Allow stylesheets to autocomplete hyphenated words
+  autocmd FileType css,scss,sass,html,haml setlocal iskeyword+=-
+augroup END
 
 
 " Allow JSX in normal JS files
