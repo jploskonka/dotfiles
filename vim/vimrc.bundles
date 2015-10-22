@@ -62,7 +62,10 @@ Plugin 'justinj/vim-react-snippets'
 Plugin 'mxw/vim-jsx'
 
 " Ansible
-Bundle 'chase/vim-ansible-yaml'
+Plugin 'chase/vim-ansible-yaml'
+
+" Scala
+Plugin 'derekwyatt/vim-scala'
 
 call vundle#end()
 filetype on
