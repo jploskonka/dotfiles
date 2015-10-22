@@ -12,6 +12,10 @@ filetype plugin indent on
 " Leader
 let mapleader = " "
 
+" Use <C-c> instead of <Esc>
+" prevents waiting for next key by not sending ^[
+imap <Esc> <C-c>
+
 let &t_Co=256
 
 set background=dark
@@ -245,6 +249,9 @@ map <leader>re :Eenvironment<space>
 map <leader>ri :Einitializer<space>
 map <leader>rx :Rextract<space>
 
+" Use <leader>rs to switch between file and spec file
+map <Leader>rs :A<CR>
+
 
 " Reload currently open windows
 function! ReloadOpenWindows()
@@ -283,3 +290,6 @@ let g:jsx_ext_required = 0
 
 " Used javascript libraries
 let g:used_javascript_libs = 'jquery,react,flux,jasmine'
+
+" Easy call EasyAlign plugin
+map <leader>e :EasyAlign 
