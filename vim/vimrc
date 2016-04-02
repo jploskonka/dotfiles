@@ -103,7 +103,8 @@ let g:ctrlp_custom_ignore = {
 " mappings for CTRL P
 map <leader>b :CtrlPBuffer<CR>
 map <leader>p :CtrlP<CR>
-map <leader>m :CtrlPMRU<CR>
+map <leader>B :CtrlPMRU<CR>
+map <leader>P :let g:ctrlp_working_path_mode="w"<CR>
 
 " get rid of last search highlight
 nnoremap <CR> :noh<CR>
@@ -112,19 +113,13 @@ nnoremap <CR> :noh<CR>
 set number
 set numberwidth=5
 
-" Tab completion
-" will insert tab at beginning of line,
-" will use completion if not at beginning
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <S-Tab> <c-n>
+" YouCompleteMe
+let g:ycm_key_list_select_completion = ['<C-j>']
+let g:ycm_key_list_previous_completion = ['<C-k>']
+
+" UltiSnips
+" let g:UltiSnipsExpandTrigger
+let g:UltiSnipsJumpForwardTrigger='<TAB>'
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -175,10 +170,14 @@ noremap <leader>v "*p
 nnoremap <leader>] gt
 nnoremap <leader>[ gT
 
-" splits resize
+" windows resize
 nnoremap <leader>. 20<C-w>>
 nnoremap <leader>, 20<C-w><
 nnoremap <leader>= <C-w>=
+
+" maximize/minimize window
+nnoremap <leader>m <C-w>\|
+nnoremap <leader>M <C-w>_
 
 " Spin calling copied from
 " https://github.com/jareks/dotfiles/blob/master/vim/.vimrc
@@ -261,10 +260,6 @@ function! ReloadOpenWindows()
 endfunction
 
 map <leader>1 :call ReloadOpenWindows()<CR>
-
-" Move line up/down
-nnoremap U ddkP
-nnoremap Y ddp
 
 " Generate random CSS background color
 " TODO: don't use ruby for getting random number

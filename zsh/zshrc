@@ -7,6 +7,11 @@ export PATH=/usr/local/bin:$PATH
 export LC_ALL=pl_PL.UTF-8
 export LANG=pl_PL.UTF-8
 
+# GoLang workspace
+export GOPATH=$HOME/Projects/Go
+export PATH=$PATH:$GOPATH/bin
+
+
 # Shell aliases
 source ~/.aliases
 
@@ -77,3 +82,5 @@ eval "$(rbenv init - zsh)"
 # https://github.com/nvbn/thefuck
 alias fuck='$(thefuck $(fc -ln -1))'
 alias FUCK='fuck'
+
+ulimit -n 10240

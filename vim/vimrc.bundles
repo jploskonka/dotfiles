@@ -14,7 +14,7 @@ Plugin 'chriskempson/base16-vim'
 
 " Define bundles via Github repos
 " ctrlp with faster matcher
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'rking/ag.vim'
 
@@ -27,9 +27,12 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fugitive'
 
 " Snippets
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+Plugin 'SirVer/ultisnips'
+" -- Mocha JS
+Plugin 'alexbyk/vim-ultisnips-js-testing'
+
+" Autocomplete
+Plugin 'Valloric/YouCompleteMe'
 
 " Ruby and Rails
 Plugin 'vim-ruby/vim-ruby'
@@ -39,7 +42,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'vim-scripts/tComment'
 
 " Status line
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " html & haml
 Plugin 'othree/html5.vim'
@@ -58,14 +62,13 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 
 " Reactjs
-Plugin 'justinj/vim-react-snippets'
 Plugin 'mxw/vim-jsx'
 
 " Ansible
 Plugin 'chase/vim-ansible-yaml'
 
-" Scala
-Plugin 'derekwyatt/vim-scala'
+" Go lang
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype on

@@ -36,7 +36,7 @@ alias j='jobs'
 alias brs='bundle exec rails s -b 0.0.0.0'
 alias pbrs='SHOW_PROFILER=1 brs'
 alias brc='bundle exec rails c'
-alias brm='bundle exec rake db:migrate && bundle exec rake db:migrate RAILS_ENV=test'
+alias brm='bundle exec rake db:migrate'
 alias br='bundle exec rails'
 # spin
 alias ss='spin serve'
@@ -48,19 +48,15 @@ alias chi='chrome-cli info'
 
 # tmux
 alias tx='tmux'
+alias txn='tmux new -s'
 alias txl='tmux ls'
 alias txa='tmux attach -t'
-
-# Rust lang
-alias rc='rustc'
-alias c='cargo'
-alias cb='cargo build'
-alias cr='cargo run'
 
 # use gnu date instead of date
 alias date='gdate'
 
-# npm
+# node & npm
+alias n='node'
 alias ni='npm install'
 alias nis='npm install --save'
 alias nisd='npm install --save-dev'
@@ -68,3 +64,9 @@ alias np='npm prune'
 alias nr='npm run'
 alias nrd='npm run dev'
 alias nt='npm test'
+
+# elasticsearch
+alias es='elasticsearch'
+
+# presentations from markdown
+alias ds='open -a /Applications/Deckset.app'
