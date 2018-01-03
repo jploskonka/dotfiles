@@ -19,7 +19,7 @@ export EDITOR=vim
 
 # Plugins
 # use Antigen for plugins management
-source ~/.antigen.zsh
+source $(brew --prefix)/share/antigen/antigen.zsh
 
 # Load oh-my-zsh library
 antigen use oh-my-zsh

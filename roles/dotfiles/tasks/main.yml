@@ -7,9 +7,13 @@
   with_items:
     - { source: "vim/vimrc", dest: "~/.vimrc" }
     - { source: "vim/vimrc.bundles", dest: "~/.vimrc.bundles" }
+
     - { source: "git/gitconfig", dest: "~/.gitconfig" }
     - { source: "git/gitignore", dest: "~/.gitignore" }
     - { source: "git/gitmessage", dest: "~/.gitmessage" }
+
+    - { source: "zsh/aliases", dest: "~/.aliases" }
+    - { source: "zsh/zshrc", dest: "~/.zshrc" }
 
 - name: Ensure Vundle is installed
   git:

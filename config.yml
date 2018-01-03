@@ -8,5 +8,6 @@ homebrew_installed_packages:
   - tmux
   - { name: "vim", install_options: "with-override-system-vi" }
   - the_silver_searcher
+  - antigen
 
 homebrew_cask_apps: []
