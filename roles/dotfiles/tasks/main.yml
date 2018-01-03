@@ -23,3 +23,19 @@
 
 - debug:
     msg: "Install vim plugins with vim +PluginInstall +qall"
+
+- name: Get zsh path
+  shell: which zsh
+  register: zsh_path
+
+- name: List zsh in /etc/shells
+  lineinfile:
+    dest: '/etc/shells'
+    line: "{{ zsh_path.stdout_lines[0] }}"
+    insertafter: EOF
+    state: present
+  become: yes
+
+- name: Set zsh as default shell
+  shell: chsh -s $(which zsh)
+
