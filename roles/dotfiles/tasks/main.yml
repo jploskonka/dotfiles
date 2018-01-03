@@ -39,3 +39,12 @@
 - name: Set zsh as default shell
   shell: chsh -s $(which zsh)
 
+- name: Get base16 shell colors
+  git:
+    repo: https://github.com/chriskempson/base16-shell.git
+    dest: ~/.config/base16-shell
+    force: yes
+
+- debug:
+  msg: Enable base16 colors by executing base_16[TAB] and selecting desired theme
+
