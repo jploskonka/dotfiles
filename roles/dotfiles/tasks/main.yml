@@ -48,5 +48,8 @@
     force: yes
 
 - debug:
-  msg: Enable base16 colors by executing base_16[TAB] and selecting desired theme
+    msg: Enable base16 colors by executing base_16[TAB] and selecting desired theme
+
+- debug:
+    msg: Remember to install iterm font compatible with powerline (iterm_font file)
 
