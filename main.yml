@@ -1,0 +1,13 @@
+---
+- hosts: all
+  connection: local
+
+  vars_files:
+    - config.yml
+
+  roles:
+    - role: geerlingguy.homebrew
+      tags: ['homebrew']
+
+    - role: dotfiles
+      tags: ['dotfiles']

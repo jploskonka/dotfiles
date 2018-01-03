@@ -1,0 +1,12 @@
+---
+homebrew_installed_packages:
+  - git
+  - mysql
+  - tree
+  - zsh
+  - zsh-completions
+  - tmux
+  - { name: "vim", install_options: "with-override-system-vi" }
+  - the_silver_searcher
+
+homebrew_cask_apps: []

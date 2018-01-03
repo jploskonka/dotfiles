@@ -1,0 +1,21 @@
+---
+- name: Copy dotfiles to home directory
+  copy:
+    src: "{{ item.source }}"
+    dest: "{{ item.dest }}"
+  become: no
+  with_items:
+    - { source: "vim/vimrc", dest: "~/.vimrc" }
+    - { source: "vim/vimrc.bundles", dest: "~/.vimrc.bundles" }
+    - { source: "git/gitconfig", dest: "~/.gitconfig" }
+    - { source: "git/gitignore", dest: "~/.gitignore" }
+    - { source: "git/gitmessage", dest: "~/.gitmessage" }
+
+- name: Ensure Vundle is installed
+  git:
+    repo: https://github.com/gmarik/Vundle.vim.git
+    dest: ~/.vim/bundle/Vundle.vim
+    force: yes
+
+- debug:
+    msg: "Install vim plugins with vim +PluginInstall +qall"
