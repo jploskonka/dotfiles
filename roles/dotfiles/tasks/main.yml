@@ -16,6 +16,7 @@
     - { source: "zsh/zshrc", dest: "~/.zshrc" }
 
     - { source: "tmux/tmux.conf", dest: "~/.tmux.conf" }
+    - { source: "tmux/tmuxline.snapshot", dest: "~/.tmuxline.snapshot" }
 
 - name: Ensure Vundle is installed
   git:
