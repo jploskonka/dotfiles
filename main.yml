@@ -9,5 +9,8 @@
     - role: geerlingguy.homebrew
       tags: ['homebrew']
 
+    - role: pip
+      tags: ['pip']
+
     - role: dotfiles
       tags: ['dotfiles']

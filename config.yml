@@ -11,4 +11,7 @@ homebrew_installed_packages:
   - antigen
   - htop
 
+pip_install_packages:
+  - glances
+
 homebrew_cask_apps: []
