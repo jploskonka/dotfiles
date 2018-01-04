@@ -9,5 +9,6 @@ homebrew_installed_packages:
   - { name: "vim", install_options: "with-override-system-vi" }
   - the_silver_searcher
   - antigen
+  - htop
 
 homebrew_cask_apps: []
