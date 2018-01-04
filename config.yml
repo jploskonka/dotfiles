@@ -10,6 +10,7 @@ homebrew_installed_packages:
   - the_silver_searcher
   - antigen
   - htop
+  - imagemagick
 
 pip_install_packages:
   - glances
