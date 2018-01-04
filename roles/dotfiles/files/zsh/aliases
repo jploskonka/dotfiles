@@ -70,3 +70,7 @@ alias es='elasticsearch'
 
 # presentations from markdown
 alias ds='open -a /Applications/Deckset.app'
+
+
+alias glances='docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host -it docker.io/nicolargo/glances'
+
