@@ -1,22 +1,23 @@
 ---
-- name: Copy dotfiles to home directory
-  copy:
+- name: Symlink dotfiles to home directory
+  file:
     src: "{{ item.source }}"
     dest: "{{ item.dest }}"
+    state: link
   become: no
   with_items:
-    - { source: "vim/vimrc", dest: "~/.vimrc" }
-    - { source: "vim/vimrc.bundles", dest: "~/.vimrc.bundles" }
+    - { source: "{{ role_path }}/files/vim/vimrc", dest: "~/.vimrc" }
+    - { source: "{{ role_path }}/files/vim/vimrc.bundles", dest: "~/.vimrc.bundles" }
 
-    - { source: "git/gitconfig", dest: "~/.gitconfig" }
-    - { source: "git/gitignore", dest: "~/.gitignore" }
-    - { source: "git/gitmessage", dest: "~/.gitmessage" }
+    - { source: "{{ role_path }}/files/git/gitconfig", dest: "~/.gitconfig" }
+    - { source: "{{ role_path }}/files/git/gitignore", dest: "~/.gitignore" }
+    - { source: "{{ role_path }}/files/git/gitmessage", dest: "~/.gitmessage" }
 
-    - { source: "zsh/aliases", dest: "~/.aliases" }
-    - { source: "zsh/zshrc", dest: "~/.zshrc" }
+    - { source: "{{ role_path }}/files/zsh/aliases", dest: "~/.aliases" }
+    - { source: "{{ role_path }}/files/zsh/zshrc", dest: "~/.zshrc" }
 
-    - { source: "tmux/tmux.conf", dest: "~/.tmux.conf" }
-    - { source: "tmux/tmuxline.snapshot", dest: "~/.tmuxline.snapshot" }
+    - { source: "{{ role_path }}/files/tmux/tmux.conf", dest: "~/.tmux.conf" }
+    - { source: "{{ role_path }}/files/tmux/tmuxline.snapshot", dest: "~/.tmuxline.snapshot" }
 
 - name: Ensure Vundle is installed
   git:
