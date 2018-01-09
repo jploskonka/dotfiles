@@ -13,7 +13,9 @@ homebrew_installed_packages:
   - imagemagick
   - gawk
 
+homebrew_cask_apps:
+  - virtualbox
+
 pip_install_packages:
   - glances
 
-homebrew_cask_apps: []
