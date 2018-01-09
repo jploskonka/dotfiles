@@ -16,6 +16,7 @@ homebrew_installed_packages:
 homebrew_cask_apps:
   - virtualbox
   - vagrant
+  - chefdk
 
 pip_install_packages:
   - glances
