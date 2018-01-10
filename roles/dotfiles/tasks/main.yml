@@ -19,6 +19,8 @@
     - { source: "{{ role_path }}/files/tmux/tmux.conf", dest: "~/.tmux.conf" }
     - { source: "{{ role_path }}/files/tmux/tmuxline.snapshot", dest: "~/.tmuxline.snapshot" }
 
+    - { source: "{{ role_path }}/files/bundle/config", dest: "~/.bundle/config" }
+
 - name: Ensure Vundle is installed
   git:
     repo: https://github.com/gmarik/Vundle.vim.git
