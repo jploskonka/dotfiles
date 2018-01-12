@@ -13,6 +13,7 @@ homebrew_installed_packages:
   - imagemagick
   - gawk
   - bindfs
+  - openvpn
 
 homebrew_cask_apps:
   - virtualbox
