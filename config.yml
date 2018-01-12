@@ -12,11 +12,13 @@ homebrew_installed_packages:
   - htop
   - imagemagick
   - gawk
+  - bindfs
 
 homebrew_cask_apps:
   - virtualbox
   - vagrant
   - chefdk
+  - osxfuse
 
 pip_install_packages:
   - glances
