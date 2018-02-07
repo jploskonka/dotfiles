@@ -31,9 +31,6 @@ Plugin 'SirVer/ultisnips'
 " -- Mocha JS
 Plugin 'alexbyk/vim-ultisnips-js-testing'
 
-" Autocomplete
-Plugin 'Valloric/YouCompleteMe'
-
 " Ruby and Rails
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
