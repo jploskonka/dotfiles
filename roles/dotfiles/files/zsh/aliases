@@ -1,3 +1,7 @@
+# Ansible
+alias a='ansible'
+alias ap='ansible-playbook'
+
 # rm with prompt
 alias rm='rm -i'
 
