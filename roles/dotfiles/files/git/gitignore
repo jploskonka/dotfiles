@@ -21,3 +21,5 @@ vendor/bundle
 
 facts-cache
 npm-debug.log
+
+docker.dev/
