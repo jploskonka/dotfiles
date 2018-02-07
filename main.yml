@@ -14,3 +14,6 @@
 
     - role: dotfiles
       tags: ['dotfiles']
+
+    - role: geerlingguy.mas
+

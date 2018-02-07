@@ -22,6 +22,12 @@ homebrew_cask_apps:
   - osxfuse
   - tunnelblick
 
+mas_installed_apps:
+  - { id: 531349534, name: "Tadam (2.0.1)" }
+  - { id: 957734279, name: "TogglDesktop (7.4.58)" }
+  - { id: 585829637, name: "Todoist (7.0.8)" }
+  - { id: 425955336, name: "Skitch (2.8)" }
+
 pip_install_packages:
   - glances
 
