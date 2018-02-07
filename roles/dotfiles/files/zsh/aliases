@@ -1,7 +1,5 @@
 # rm with prompt
 alias rm='rm -i'
-# cd 
-alias ..='cd ..'
 
 # ls
 alias ls='pwd; ls -GF'
@@ -24,10 +22,6 @@ alias b='bundle exec'
 alias bi='bundle install'
 alias bcl='bundle clean'
 
-# cat with syntax hihlighting :D 
-alias ccat='pygmentize'
-
-# one/two letter commands for often used commands
 alias v='vim'
 alias v.='vim .'
 alias j='jobs'
@@ -38,8 +32,6 @@ alias pbrs='SHOW_PROFILER=1 brs'
 alias brc='bundle exec rails c'
 alias brm='bundle exec rake db:migrate'
 alias br='bundle exec rails'
-# spin
-alias ss='spin serve'
 
 # chrome-cli
 alias ch='chrome-cli'
@@ -62,11 +54,15 @@ alias nis='npm install --save'
 alias nisd='npm install --save-dev'
 alias np='npm prune'
 alias nr='npm run'
-alias nrd='npm run dev'
 alias nt='npm test'
 
-# elasticsearch
-alias es='elasticsearch'
+# yarn
+alias y='yarn'
+alias yr='yarn run'
+alias yt='yarn test'
 
-# presentations from markdown
-alias ds='open -a /Applications/Deckset.app'
+# Docker and docker-compose
+alias dc='docker-compose'
+alias dcr='docker-compose run'
+alias dcb='docker-compose build'
+alias dcd='docker-compose down'
