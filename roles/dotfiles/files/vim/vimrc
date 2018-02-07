@@ -114,10 +114,6 @@ nnoremap <CR> :noh<CR>
 set number
 set numberwidth=5
 
-" YouCompleteMe
-let g:ycm_key_list_select_completion = ['<C-j>']
-let g:ycm_key_list_previous_completion = ['<C-k>']
-
 " UltiSnips
 " let g:UltiSnipsExpandTrigger
 let g:UltiSnipsJumpForwardTrigger='<TAB>'
