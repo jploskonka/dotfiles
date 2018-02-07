@@ -9,6 +9,7 @@
   ui = auto
 
 [alias]
+  a = add
   aa = add --all
   ap = add --patch
 
