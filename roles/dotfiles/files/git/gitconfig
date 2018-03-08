@@ -33,6 +33,8 @@
   lgm = log --oneline --decorate --graph master..
   lgd = log --oneline --decorate --graph develop..
 
+  m = merge
+
   p = push
   pf = push --force-with-lease
 
