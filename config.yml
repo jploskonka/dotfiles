@@ -14,6 +14,7 @@ homebrew_installed_packages:
   - gawk
   - bindfs
   - openvpn
+  - redis
 
 homebrew_cask_apps:
   - virtualbox
@@ -21,6 +22,7 @@ homebrew_cask_apps:
   - chefdk
   - osxfuse
   - tunnelblick
+  - paw
 
 mas_installed_apps:
   - { id: 531349534, name: "Tadam (2.0.1)" }
