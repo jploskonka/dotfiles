@@ -23,3 +23,5 @@ facts-cache
 npm-debug.log
 
 docker.dev/
+
+*.rdb
