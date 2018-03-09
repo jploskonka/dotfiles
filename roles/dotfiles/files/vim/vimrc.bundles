@@ -49,6 +49,9 @@ Plugin 'tpope/vim-haml'
 " Easy align
 Plugin 'junegunn/vim-easy-align'
 
+" Show existing marks next to line numbers
+Plugin 'kshenoy/vim-signature'
+
 " Add correct closing tags
 " For example do...end for Ruby, function...endfunction for vimscript etc.
 Plugin 'tpope/vim-endwise'
