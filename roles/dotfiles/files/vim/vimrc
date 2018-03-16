@@ -45,6 +45,9 @@ set ignorecase
 set smartcase
 set undofile
 
+set foldcolumn=1
+set foldmethod=indent
+
 " wildmenu
 set wildmenu
 set wildmode=full:longest,full
