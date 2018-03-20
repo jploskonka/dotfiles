@@ -86,6 +86,9 @@ augroup vimrcEx
 
   " set tab width for Go Lang
   autocmd FileType go setlocal shiftwidth=8 tabstop=8
+
+  " use old regexp engine for ruby
+  autocmd FileType ruby setlocal re=1
 augroup END
 
 
