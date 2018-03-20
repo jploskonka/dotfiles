@@ -3,6 +3,10 @@ alias a='ansible'
 alias ap='ansible-playbook'
 alias aga='ansible-galaxy'
 
+# ag with pager
+alias ag='ag --pager="less -R"'
+
+
 # rm with prompt
 alias rm='rm -i'
 
