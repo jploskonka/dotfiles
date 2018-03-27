@@ -1,4 +1,7 @@
 ---
+homebrew_taps:
+  - wallix/awless
+
 homebrew_installed_packages:
   - git
   - mysql
@@ -16,6 +19,7 @@ homebrew_installed_packages:
   - openvpn
   - redis
   - node
+  - awless
 
 homebrew_cask_apps:
   - virtualbox
