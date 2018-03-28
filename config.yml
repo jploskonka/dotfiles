@@ -38,4 +38,5 @@ mas_installed_apps:
 
 pip_install_packages:
   - glances
+  - mdv
 
