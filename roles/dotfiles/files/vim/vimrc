@@ -47,6 +47,7 @@ set undofile
 
 set foldcolumn=1
 set foldmethod=indent
+set foldlevel=1
 
 " wildmenu
 set wildmenu
