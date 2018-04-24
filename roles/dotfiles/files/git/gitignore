@@ -25,3 +25,5 @@ npm-debug.log
 docker.dev/
 
 *.rdb
+
+no-commit-*
