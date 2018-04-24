@@ -24,8 +24,8 @@
   co = checkout
   cb = checkout -b
 
-  di = diff
-  dc = diff --cached
+  di = diff --color-moved
+  dc = diff --cached --color-moved
 
   l = pull
 
