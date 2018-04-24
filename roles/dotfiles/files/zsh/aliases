@@ -75,3 +75,25 @@ alias dc='docker-compose'
 alias dcr='docker-compose run'
 alias dcb='docker-compose build'
 alias dcd='docker-compose down'
+
+# gcluod
+alias gcl='gcloud'
+
+# kubernetes
+alias kctl='kubectl'
+
+# vagrant + virtualbox
+alias vnt='vagrant'
+alias vntu='vagrant up'
+alias vntp='vagrant provision'
+alias vntd='vagrant destroy'
+alias vnth='vagrant halt'
+
+alias vboxm='vboxmanage'
+
+alias kchn='kitchen'
+alias kchnt='kitchen test'
+
+# chef dk
+alias chf='chef'
+alias chfe='chef exec'
