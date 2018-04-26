@@ -28,6 +28,8 @@ homebrew_installed_packages:
   - python3
   - yarn
   - tig
+  - elixir
+  - erlang
 
 homebrew_cask_apps:
   - virtualbox
