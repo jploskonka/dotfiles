@@ -73,6 +73,9 @@ Plugin 'hashivim/vim-terraform'
 " Go lang
 Plugin 'fatih/vim-go'
 
+" Elixir
+Plugin 'elixir-editors/vim-elixir'
+
 call vundle#end()
 filetype on
 
