@@ -41,6 +41,7 @@ alias pbrs='SHOW_PROFILER=1 brs'
 alias brc='bundle exec rails c'
 alias brm='bundle exec rake db:migrate'
 alias br='bundle exec rails'
+alias ss='spin serve'
 
 # chrome-cli
 alias ch='chrome-cli'
@@ -97,3 +98,4 @@ alias kchnt='kitchen test'
 # chef dk
 alias chf='chef'
 alias chfe='chef exec'
+
