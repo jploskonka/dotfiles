@@ -30,6 +30,7 @@ homebrew_installed_packages:
   - tig
   - elixir
   - erlang
+  - chrome-cli
 
 homebrew_cask_apps:
   - virtualbox
