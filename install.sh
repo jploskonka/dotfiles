@@ -7,8 +7,8 @@ xcode-select --install
 set -e
 
 maybe_install () {
-  if ! type $1 > /dev/null; then
-    $1
+  if ! type $1 2> /dev/null; then
+    $2
   else
     echo "$1 is already installed, skipping."
   fi
