@@ -12,7 +12,6 @@ Plugin 'gmarik/Vundle.vim'
 " color scheme
 Plugin 'chriskempson/base16-vim'
 
-" Define bundles via Github repos
 " ctrlp with faster matcher
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
@@ -26,40 +25,28 @@ Plugin 'tpope/vim-dispatch'
 " Git
 Plugin 'tpope/vim-fugitive'
 
-" Snippets
-Plugin 'SirVer/ultisnips'
-" -- Mocha JS
-Plugin 'alexbyk/vim-ultisnips-js-testing'
+" Various utils
+Plugin 'vim-scripts/tComment' " commenting
+Plugin 'tpope/vim-surround' " parenthessis etc.
+Plugin 'kshenoy/vim-signature' " marks next to line numbers
+Plugin 'junegunn/vim-easy-align' " text aligning
+Plugin 'scrooloose/nerdtree' " filesystem explorer
 
-" Ruby and Rails
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-
-" Easy commenting
-Plugin 'vim-scripts/tComment'
-
-" Status line
-Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline' " statusline
 Plugin 'vim-airline/vim-airline-themes'
-
-" html & haml
-Plugin 'othree/html5.vim'
-Plugin 'tpope/vim-haml'
-
-" Easy align
-Plugin 'junegunn/vim-easy-align'
-
-" Show existing marks next to line numbers
-Plugin 'kshenoy/vim-signature'
-
-" Add correct closing tags
-" For example do...end for Ruby, function...endfunction for vimscript etc.
-Plugin 'tpope/vim-endwise'
 
 " JS
 Plugin 'othree/yajs.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
+
+" Ruby and Rails
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+
+" html & haml
+Plugin 'othree/html5.vim'
+Plugin 'tpope/vim-haml'
 
 " Reactjs
 Plugin 'mxw/vim-jsx'
@@ -69,9 +56,6 @@ Plugin 'chase/vim-ansible-yaml'
 
 " Terraform
 Plugin 'hashivim/vim-terraform'
-
-" Go lang
-Plugin 'fatih/vim-go'
 
 " Elixir
 Plugin 'elixir-editors/vim-elixir'
