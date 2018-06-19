@@ -38,6 +38,8 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'ervandew/supertab'
 
+Plugin 'ludovicchabant/vim-gutentags' " Ctags
+
 " JS
 Plugin 'othree/yajs.vim'
 Plugin 'pangloss/vim-javascript'

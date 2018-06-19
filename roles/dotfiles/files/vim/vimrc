@@ -115,6 +115,7 @@ let g:ctrlp_custom_ignore = {
 map <leader>b :CtrlPBuffer<CR>
 map <leader>p :CtrlP<CR>
 map <leader>B :CtrlPMRU<CR>
+map <leader>T :CtrlPTag<CR>
 map <leader>P :let g:ctrlp_working_path_mode="w"<CR>
 
 " get rid of last search highlight
@@ -295,3 +296,6 @@ let g:used_javascript_libs = 'jquery,react,flux,jasmine'
 
 " Easy call EasyAlign plugin
 map <leader>e :EasyAlign 
+
+" Ctags
+let g:gutentags_cache_dir = '~/.gutentags/cache'
