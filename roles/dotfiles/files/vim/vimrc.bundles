@@ -35,6 +35,8 @@ Plugin 'scrooloose/nerdtree' " filesystem explorer
 Plugin 'vim-airline/vim-airline' " statusline
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'ervandew/supertab'
+
 " JS
 Plugin 'othree/yajs.vim'
 Plugin 'pangloss/vim-javascript'
