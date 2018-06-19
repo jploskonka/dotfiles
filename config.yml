@@ -31,6 +31,7 @@ homebrew_installed_packages:
   - elixir
   - erlang
   - chrome-cli
+  - { name: "universal-ctags/universal-ctags/universal-ctags", install_options: "HEAD" }
 
 homebrew_cask_apps:
   - virtualbox
