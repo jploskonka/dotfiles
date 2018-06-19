@@ -27,10 +27,11 @@ Plugin 'tpope/vim-fugitive'
 
 " Various utils
 Plugin 'vim-scripts/tComment' " commenting
-Plugin 'tpope/vim-surround' " parenthessis etc.
+Plugin 'tpope/vim-surround' " wrapping sections
 Plugin 'kshenoy/vim-signature' " marks next to line numbers
 Plugin 'junegunn/vim-easy-align' " text aligning
 Plugin 'scrooloose/nerdtree' " filesystem explorer
+Plugin 'townk/vim-autoclose' " auto-insert closing parenthessis and stuff
 
 Plugin 'vim-airline/vim-airline' " statusline
 Plugin 'vim-airline/vim-airline-themes'
@@ -45,6 +46,8 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 " Ruby and Rails
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-rake'
 
 " html & haml
 Plugin 'othree/html5.vim'
