@@ -28,5 +28,7 @@ dep(kind):
 - pip
 - brew
 
+
+doc: documentation change
 chore: changes to development environment and usage
 style: just style, no code change
