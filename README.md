@@ -1,3 +1,7 @@
+# Usage
+./install.sh to run everything
+it accepts and passes through ANSIBLE-TAGS
+
 # App Store applications
 Apps installed from Apple App Store are managed with
 [ansible-role-mas](https://github.com/geerlingguy/ansible-role-mas).
