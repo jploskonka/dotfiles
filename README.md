@@ -12,3 +12,17 @@ though because you're not signed in yet. To do that use:
 ``` sh
 $ mas signin --dialog your_email@example.com
 ```
+# Commit tags
+
+feat(kind):
+- vim
+- git
+- tmux
+- shell
+
+dep(kind):
+- pip
+- brew
+
+chore: changes to development environment and usage
+style: just style, no code change
