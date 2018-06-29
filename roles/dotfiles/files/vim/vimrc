@@ -81,6 +81,7 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile *.asc set filetype=asciidoc
 
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
@@ -299,3 +300,11 @@ map <leader>e :EasyAlign
 
 " Ctags
 let g:gutentags_cache_dir = '~/.gutentags/cache'
+
+" Terraform
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+
+" Disable C-j in nerdtree
+let g:NERDTreeMapJumpNextSibling="☻"
+let g:NERDTreeMapJumpPrevSibling="☺"

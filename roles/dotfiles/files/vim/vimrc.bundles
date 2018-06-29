@@ -32,6 +32,7 @@ Plugin 'kshenoy/vim-signature' " marks next to line numbers
 Plugin 'junegunn/vim-easy-align' " text aligning
 Plugin 'scrooloose/nerdtree' " filesystem explorer
 Plugin 'townk/vim-autoclose' " auto-insert closing parenthessis and stuff
+Plugin 'brooth/far.vim' " Global search and replace
 
 Plugin 'vim-airline/vim-airline' " statusline
 Plugin 'vim-airline/vim-airline-themes'
@@ -44,6 +45,7 @@ Plugin 'ludovicchabant/vim-gutentags' " Ctags
 Plugin 'othree/yajs.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'kchmck/vim-coffee-script'
 
 " Ruby and Rails
 Plugin 'vim-ruby/vim-ruby'
